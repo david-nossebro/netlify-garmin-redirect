@@ -1,3 +1,5 @@
 [[redirects]]
   from = "/garmin/*"
   to = "https://eur-origin.explore.garmin.com/Feed/Share/:splat"
+  status = 200
+  force = true
