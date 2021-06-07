@@ -46,7 +46,7 @@ function App() {
 
   const [map, setMap] = useState<L.Map | null>(null)
   const [geoJson, setGeoJson] = useState()
-  const [currentZoomLevel, setCurrentZoomLevel] = useState(5)
+  //const [currentZoomLevel, setCurrentZoomLevel] = useState(5)
 
   useEffect(() => {
     let mymap: L.Map = L.map('mapid').setView([58.286395, 10.107422], 5)
@@ -54,7 +54,7 @@ function App() {
     L.tileLayer('https://b.tile.opentopomap.org/{z}/{x}/{y}.png').addTo(mymap);
     mymap.on('zoomend', () => {
       console.log("ZoomLevel: ", mymap.getZoom())
-      setCurrentZoomLevel(mymap.getZoom())
+      //setCurrentZoomLevel(mymap.getZoom())
     })
     setMap(mymap)
   }, [])
